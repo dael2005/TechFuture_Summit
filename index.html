@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechFuture Summit</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    TechFuture Summit
+  </header>
+
+  <section id="sobre" aria-label="Informações sobre o evento">
+    <h2>Sobre o Evento</h2>
+    <p><strong>Data:</strong> 27 de Maio de 2025</p>
+    <p><strong>Local:</strong> Centro de Convenções, Salvador/BA</p>
+    <p>A Resenha TechFuture é, basicamente, um ponto de encontro para mentes criativas e apaixonadas por tecnologia – desenvolvedores e designers reunidos para compartilhar insights, explorar as últimas tendências em tecnologia e design... e, claro, lutar para lembrar a senha do Wi-Fi!</p>
+  </section>
+
+  <section id="palestrantes" aria-label="Palestrantes do evento">
+    <h2>Palestrantes</h2>
+    <div class="palestrante">
+      <h3>Cauã Rocha</h3>
+      <img src="./src/yuri22-yuri-22.gif" alt="Foto do palestrante Cauã Rocha Camara" />
+      <p>Sou estudante de Análise e Desenvolvimento de Sistemas, faço faculdade no centro universitário Unijorge.</p>
+    </div>
+  </section>
+
+  <section id="inscricao" aria-label="Formulário de inscrição">
+    <h2>Inscreva-se</h2>
+    <form id="formulario" action="#" method="post" novalidate>
+      <label for="nome">Nome Completo:</label>
+      <input type="text" id="nome" name="nome" required placeholder="Seu nome completo" />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com" />
+
+      <fieldset>
+        <legend>Tipo de Ingresso:</legend>
+        <label><input type="radio" name="tipo_ingresso" value="presencial" required /> Presencial</label>
+        <label><input type="radio" name="tipo_ingresso" value="online" required /> Online</label>
+      </fieldset>
+
+      <label><input type="checkbox" name="termos" required /> Aceito os termos</label>
+
+      <button type="submit">Enviar Inscrição</button>
+      <div id="mensagem">Sua inscrição foi enviada com sucesso!</div>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 TechConnect. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    const form = document.getElementById("formulario");
+    const mensagem = document.getElementById("mensagem");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      mensagem.style.display = "block";
+      form.reset();
+      setTimeout(() => {
+        mensagem.style.display = "none";
+      }, 5000);
+    });
+  </script>
+</body>
+</html>
